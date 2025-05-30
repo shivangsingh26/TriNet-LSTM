@@ -3,6 +3,7 @@
 3 different tasks(got dataset from kaggle)
 
 NOTE : model will be trained individually on this dataset, we wont combine our datasets, also the output generated through it will also be seperate.
+But a single model will be trained and inference also will be done using that model only.
 
 emotion detection :
 
@@ -40,3 +41,25 @@ SO We create a balanced dataset by keeping ratio of all classes consistent.(Well
 
 Label Encoding
 1. in violence_dataset label names are categorical so we need to encode them.
+
+Stop Words Removal
+
+Tokenization,
+Padding
+(Here text got converted to numpy arrays(because output hi vaisa hai))
+
+Converting labels to numpy arrays as well
+
+
+MODEL DEFINITON:
+1.seperate input layers for all tasks
+2.core layers remains the same and are shared(lstm+embeddings+pooling+dropout)
+3.seperate output layers
+
+MODEL ARCHITECTURE:
+
+1.SEPERATE INPUT LAYERS
+2.SHARED EMBEDDING LAYER
+3.SHARED LSTM LAYER
+4.SHARED GLOBAL AVERAGE POOLING LAYER
+5.SHARED DROPOUT LAYER
